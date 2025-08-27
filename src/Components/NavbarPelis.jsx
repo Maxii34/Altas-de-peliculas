@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 const NavbarPelis = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-dark-subtle shadow" variant="dark">
       <Container>
         <Navbar.Brand href="#home">Altas De peliculasHD</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

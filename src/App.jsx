@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImputPelis from './Components/ImputCompon';
-import './App.css'
 import NavbarPelis from './Components/NavbarPelis';
+import './App.css'
+import FooterPrecentacion from './Components/FooterPrecentacion';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main>
         <ImputPelis />
       </main>
+      <FooterPrecentacion />
     </>
   )
 }
