@@ -10,6 +10,7 @@ const ContainerCard = ({ nuevasPelis }) => {
               nombre={peli.nombre}
               genero={peli.genero}
               descripcion={peli.descripcion}
+              imagen={peli.imagenURL}
             />
           </div>
         ))}

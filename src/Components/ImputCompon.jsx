@@ -80,6 +80,24 @@ const ImputPelis = () => {
             )}
           </Form.Group>
 
+          <Form.Group className="mb-3">
+            <Form.Label>Imagen URL (opcional)</Form.Label>
+            <Form.Control
+              type="url"
+              {...register("imagen", {
+                pattern: {
+                  value: /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp))/i,
+                  message:
+                    "Debe ser una URL válida de imagen (jpg, png, gif, webp)",
+                },
+              })}
+              placeholder="https://ejemplo.com/imagen.jpg"
+            />
+            {errors.imagen && (
+              <span className="text-danger">{errors.imagen.message}</span>
+            )}
+          </Form.Group>
+
           <Form.Group className="mb-3" controlId="campoDescripcion">
             <Form.Label>Descripción</Form.Label>
             <Form.Control
@@ -110,7 +128,7 @@ const ImputPelis = () => {
           </button>
         </Form>
       </div>
-      <ContainerCard nuevasPelis={ImputPelis}  />
+      <ContainerCard nuevasPelis={ImputPelis} />
     </section>
   );
 };
