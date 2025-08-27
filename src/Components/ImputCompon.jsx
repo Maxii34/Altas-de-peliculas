@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import ContainerCard from "./ContainerCard";
+import Form from "react-bootstrap/Form";
+import Swal from "sweetalert2";
 
 const ImputPelis = () => {
   const {
@@ -27,13 +28,24 @@ const ImputPelis = () => {
     const nuevasPelis = [...ImputPelis, nuevaPeli];
     setPelis(nuevasPelis);
     guardarPelis(nuevasPelis);
+
+    Swal.fire(
+      "Datos enviados",
+      "Los datos fueron enviados correctamente.",
+      "success"
+    );
+
     reset();
   };
 
   return (
     <section className="container mt-5">
       <div className="card shadow p-4">
-        <Form onSubmit={handleSubmit(validacion)}>
+        <Form
+          onSubmit={handleSubmit(validacion, (errors) => {
+            Swal.fire("Error", "Completa todos los datos.", "error");
+          })}
+        >
           <Form.Group className="mb-3" controlId="campoNombre">
             <Form.Label>Nombre de la pelicula.</Form.Label>
             <Form.Control
