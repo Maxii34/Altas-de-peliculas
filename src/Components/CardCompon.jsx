@@ -1,10 +1,9 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Card } from "react-bootstrap";
 
-const CardCompon = ({ nombre, genero, descripcion, imagenURL }) => {
+const CardCompon = ({ id, nombre, genero, descripcion, imagen, borrarPeli }) => {
   return (
-    <Card className="h-100 shadow border-1 rounded-1">
-      <Card.Img variant="top" src={imagenURL} />
+    <Card className="h-100 shadow">
+      <Card.Img variant="top" src={imagen} />
       <Card.Body>
         <Card.Title>{nombre}</Card.Title>
         <Card.Text>
@@ -12,6 +11,12 @@ const CardCompon = ({ nombre, genero, descripcion, imagenURL }) => {
           <br />
           <strong>Descripción:</strong> {descripcion}
         </Card.Text>
+        <button
+          className="btn btn-danger btn-sm shadow"
+          onClick={() => borrarPeli(id)}
+        >
+          Eliminar
+        </button>
       </Card.Body>
     </Card>
   );

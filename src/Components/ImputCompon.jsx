@@ -38,6 +38,13 @@ const ImputPelis = () => {
     reset();
   };
 
+const borrarPeli = (id) => {
+  const pelisActualizadas = ImputPelis.filter((peli) => peli.id !== id);
+  setPelis(pelisActualizadas)
+  guardarPelis(pelisActualizadas);
+}
+
+
   return (
     <section className="container mt-5">
       <div className="card shadow p-4">
@@ -140,7 +147,7 @@ const ImputPelis = () => {
           </button>
         </Form>
       </div>
-      <ContainerCard nuevasPelis={ImputPelis} />
+      <ContainerCard nuevasPelis={ImputPelis} borrarPeli={borrarPeli} />
     </section>
   );
 };
