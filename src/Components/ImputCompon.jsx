@@ -46,8 +46,8 @@ const borrarPeli = (id) => {
 
 
   return (
-    <section className="container mt-5">
-      <div className="card shadow p-4">
+    <section className="container mt-5 ">
+      <div className="card card-body shadow-card p-4 bg-dark text-white">
         <Form
           onSubmit={handleSubmit(validacion, (errors) => {
             Swal.fire("Error", "Completa todos los datos.", "error");

@@ -1,0 +1,30 @@
+.img-peli{
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.borderTop{
+    border-top: 2px solid #8d8989;
+}
+
+.shadow-card{
+    box-shadow: 0 4px 8px 0 rgba(231, 226, 226, 0.2), 0 6px 20px 0 rgba(94, 92, 92, 0.19);
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/*color azulado para el nav y el footer */
+nav, footer {
+  background-color: #10428df6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(50, 43, 145, 0.945);
+}
