@@ -2,7 +2,7 @@
 
 Una aplicación web simple y elegante para **dar de alta películas**, con formulario validado, almacenamiento persistente mediante `localStorage` y visualización en tarjetas responsivas.
 
-🔗 **[Ver demo (deploy)](https://tu-app-deploy.netlify.app)** 
+🔗 **[Ver demo (deploy)](https://altasdepeliculashd.netlify.app/)** 
 
 ---
 
